@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Ксения Зуева](https://up.htmlacademy.ru/adaptive/18/user/974729).
-* Наставник: `Неизвестно`.
+* Студент: [Ксения Зуева] (https://up.htmlacademy.ru/adaptive/18/user/974729)
+* Наставник: [Малик] (https://htmlacademy.ru/profile/id17217)
 
 ---
 
