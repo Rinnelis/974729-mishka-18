@@ -9,3 +9,46 @@
   line-height: 20px;
   font-weight: bold;
 }
+
+/* Мобильная версия */
+
+.about-us {
+  width: 320px;
+  margin: 0 auto;
+}
+
+/* Планшетная версия */
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    width: 670px;
+    margin: 0 auto;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-us__item {
+    width: 315px;
+  }
+}
+
+/* Десктопная версия */
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-us__item {
+    width: 320px;
+  }
+}

@@ -25,3 +25,38 @@
   font-weight: bold;
   color: #444444;
 }
+
+.main-popular__list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Мобильная версия */
+
+.main-popular {
+  width: 320px;
+  margin: 0 auto;
+}
+
+/* Планшетная версия */
+
+@media (min-width: @tablet-width) {
+  .main-popular {
+    width: 670px;
+    margin: 0 auto;
+  }
+
+  .main-popular__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* Десктопная версия */
+
+@media (min-width: @desktop-width) {
+  .main-popular {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}

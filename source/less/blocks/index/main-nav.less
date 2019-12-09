@@ -3,3 +3,65 @@
   line-height: 24px;
   font-weight: bold;
 }
+
+/* Мобильная версия */
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 79px;
+}
+
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.site-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Планшетная версия */
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+    width: 670px;
+    margin: 0 auto;
+  }
+
+  .page-header__logo {
+    height: 90px;
+  }
+
+  .site-list {
+    flex-direction: row;
+  }
+
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+}
+
+/* Десктопная версия */
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    flex-direction: row;
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .page-header__logo {
+    display: absolute;
+  }
+
+  .site-list {
+    flex-direction: row;
+  }
+}
