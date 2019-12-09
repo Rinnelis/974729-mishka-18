@@ -1,17 +1,19 @@
-.catalog-video__title {
-  font-size: 17px;
-  line-height: 24px;
+.form__title {
+  font-size: 27px;
+  line-height: 30px;
   font-weight: bold;
+  background-color: #f1f1f1;
 }
 
-.catalog-video__description {
+.form__description {
   font-size: 13px;
   line-height: 24px;
+  color: #444444;
 }
 
 /* Мобильная версия */
 
-.catalog-video {
+.form__top {
   width: 320px;
   margin: 0 auto;
 }
@@ -19,7 +21,7 @@
 /* Планшетная версия */
 
 @media (min-width: @tablet-width) {
-  .catalog-video {
+  .form__top {
     width: 768px;
     margin: 0 auto;
   }
@@ -28,9 +30,8 @@
 /* Десктопная версия */
 
 @media (min-width: @desktop-width) {
-  .catalog-video {
+  .form__top {
     width: 1050px;
     margin: 0 auto;
-    display: flex;
   }
 }

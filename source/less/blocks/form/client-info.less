@@ -3,3 +3,30 @@
   line-height: 18px;
   font-weight: bold;
 }
+
+/* Мобильная версия */
+
+.client-info {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Планшетная версия */
+
+@media (min-width: @tablet-width) {
+  .client-info {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+/* Десктопная версия */
+
+@media (min-width: @desktop-width) {
+  .client-info {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}

@@ -3,6 +3,8 @@
   background-repeat: no-repeat;
   background-size: 575px 373px, auto auto;
   min-height: 373px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .main-top__title {
@@ -21,4 +23,25 @@
   &:nth-of-type(2) {
       background-color: #56c3b2;
     }
+}
+
+/* Планшетная версия */
+
+@media (min-width: @tablet-width) {
+  .main-top {
+    width: 670px;
+  }
+
+  .top-list {
+    display: flex;
+  }
+}
+
+/* Десктопная версия */
+
+@media (min-width: @desktop-width) {
+  .main-top {
+    width: 1050px;
+    margin: 0 auto;
+  }
 }

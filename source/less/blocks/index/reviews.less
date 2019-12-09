@@ -19,3 +19,35 @@
   font-size: 17px;
   line-height: 30px;
 }
+
+.reviews__prev,
+.reviews__next {
+  width: 130px;
+}
+
+/* Мобильная версия */
+
+.reviews {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Планшетная версия */
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    width: 670px;
+    margin: 0 auto;
+  }
+}
+
+/* Десктопная версия */
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}

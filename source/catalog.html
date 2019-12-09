@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог «Мишка»</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
 
   <body>
@@ -61,12 +62,16 @@
       </section>
 
       <section class="catalog-video">
-        <h2 class="catalog-video__title">Процесс производства</h2>
+        <div class="catalog-video__left-column">
         <img class="catalog-video__image" src="img/video-mobile@1x.jpg" width="260" height="150" alt="">
         <button class="catalog-video__button" type="button"><span class="visually-hidden">Воспроизвести видео</span></button>
+        </div>
+        <div class="catalog-video__right-column">
+        <h2 class="catalog-video__title">Процесс производства</h2>
         <p class="catalog-video__description">По просьбам наших любимых фолловеров мы сняли
           для вас подробное видео о том, как появляются наши товары.</p>
         <a class="catalog-order button" href="#">Сделать заказ</a>
+        </div>
       </section>
     </main>
 

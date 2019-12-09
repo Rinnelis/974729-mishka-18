@@ -1,25 +1,16 @@
-.catalog-video__title {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: bold;
-}
-
-.catalog-video__description {
-  font-size: 13px;
-  line-height: 24px;
-}
-
 /* Мобильная версия */
 
-.catalog-video {
+.additional-info {
   width: 320px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Планшетная версия */
 
 @media (min-width: @tablet-width) {
-  .catalog-video {
+  .additional-info {
     width: 768px;
     margin: 0 auto;
   }
@@ -28,9 +19,8 @@
 /* Десктопная версия */
 
 @media (min-width: @desktop-width) {
-  .catalog-video {
+  .additional-info {
     width: 1050px;
     margin: 0 auto;
-    display: flex;
   }
 }

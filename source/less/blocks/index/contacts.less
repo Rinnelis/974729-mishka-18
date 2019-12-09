@@ -9,3 +9,29 @@
   font-size: 15px;
   line-height: 30px;
 }
+
+/* Мобильная версия */
+
+.contacts {
+  width: 320px;
+  margin: 0 auto;
+}
+
+/* Планшетная версия */
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+/* Десктопная версия */
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 1050px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
