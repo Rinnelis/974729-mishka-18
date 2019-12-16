@@ -25,11 +25,23 @@
 @media (min-width: @desktop-width) {
   .page-header {
     flex-direction: row;
-    width: 1050px;
+    width: 1150px;
     margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: 1px;
+      background: #ececec;
+      top: 88px;
+    }
   }
 
   .page-header__logo {
     display: absolute;
+    width: 291px;
+    border-bottom: none;
+    cursor: pointer;
   }
 }
