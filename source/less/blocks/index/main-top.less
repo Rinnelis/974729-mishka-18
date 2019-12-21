@@ -1,5 +1,5 @@
 .main-top {
-  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 575px 373px, auto auto;
   min-height: 373px;
@@ -63,8 +63,10 @@
   .item-toy-link {
     display: flex;
     justify-content: space-between;
-    width: 260px;
-    margin: 0 auto;
+    width: 320px;
+    box-sizing: border-box;
+    padding-left: 28px;
+    padding-right: 30px;
     padding-top: 25px;
     padding-bottom: 18px;
   }
@@ -106,10 +108,10 @@
       position: absolute;
       width: 100%;
       height: 35px;
-      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center;
       background-size: 768px 35px;
-      bottom: -13px;
+      bottom: -18px;
     }
   }
 
@@ -150,7 +152,8 @@
     padding-left: 35px;
     padding-right: 35px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       padding-top: 30px;
       margin-top: -5px;
       margin-bottom: 5px;
@@ -170,6 +173,7 @@
       background-size: auto 37px;
       background-repeat: repeat-x;
       background-position: 50% 2px;
+      bottom: -13px;
     }
   }
 

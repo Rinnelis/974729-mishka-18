@@ -29,7 +29,8 @@
   border: none;
   background: transparent;
 
-  &:hover path {
+  &:hover path,
+  &:focus path {
     fill: #63d1bb;
   }
 
@@ -97,6 +98,10 @@
     flex-wrap: wrap;
     border: 1px solid #ececec;
     margin-bottom: 54px;
+
+    &:hover .catalog-list__text {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .catalog-list__image-link {
