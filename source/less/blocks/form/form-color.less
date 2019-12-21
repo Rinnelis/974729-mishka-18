@@ -4,13 +4,53 @@
   font-weight: bold;
 }
 
+.form-color__list {
+  padding-left: 0;
+  margin: 0;
+}
+
+.form-color__item {
+  padding-bottom: 44px;
+
+  & label {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 36px;
+      height: 35px;
+      top: -6px;
+      left: -63px;
+      border: 2px solid #444444;
+    }
+
+  & label:hover::before {
+    border-color: #62d1ba;
+  }
+
+  & label:active::before {
+    border-color: #c7c7c7;
+  }
+}
+}
+
+.form-color__input:checked + label::before {
+  background: url(../../img/icon-tick.svg) center center no-repeat;
+  background-size: 63%;
+}
+
 /* Мобильная версия */
 
-.form-color {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+@media (max-width: @mobile-width-only) {
+  .form-color .form__right-column {
+    margin-left: 63px;
+    margin-top: 33px;
+  }
+
+  .form-color__list {
+    margin-bottom: -18px;
+  }
 }
 
 /* Планшетная версия */
@@ -19,6 +59,53 @@
   .form-color {
     width: 768px;
     margin: 0 auto;
+    background-color: #f1f1f1;
+    min-height: 304px;
+
+    & .form__right-column {
+      width: 500px;
+      margin-left: auto;
+      margin-top: -3px;
+    }
+  }
+
+  .form-color__wrapper {
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 68px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-color__list {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 25px;
+  }
+
+  .form-color__item {
+    width: 170px;
+    padding-left: 30px;
+    padding-bottom: 57px;
+
+    & label {
+      font-size: 19px;
+      line-height: 18px;
+      padding-left: 25px;
+      position: relative;
+
+      &::before {
+        width: 50px;
+        height: 48px;
+        top: -11px;
+        left: -56px;
+      }
+    }
+
+    &:nth-child(2n) {
+      padding-left: 92px;
+    }
   }
 }
 
@@ -26,7 +113,32 @@
 
 @media (min-width: @desktop-width) {
   .form-color {
-    width: 1050px;
+    width: 1150px;
     margin: 0 auto;
+    min-height: 228px;
+
+    & .form__right-column {
+      width: 875px;
+      margin-left: 116px;
+    }
+  }
+
+  .form-color__wrapper {
+    width: 930px;
+    margin: 0 auto;
+    padding-top: 67px;
+  }
+
+  .form-color__item {
+    width: 233px;
+    padding-left: 30px;
+
+    &:nth-child(2n) {
+      padding-left: 30px;
+    }
+  }
+
+  .form-color__list {
+    margin-top: -15px;
   }
 }

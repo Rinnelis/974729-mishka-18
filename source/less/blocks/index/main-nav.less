@@ -8,7 +8,7 @@
     position: relative;
     width: 320px;
     margin: 0 auto;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid #dfdfdf;
   }
 
   .main-nav__toggle {
@@ -70,6 +70,11 @@
   .main-nav--nojs .site-list-left__item {
     display: block;
   }
+
+  .main-nav--closed .site-list-right__item,
+  .main-nav--closed .site-list-left__item {
+   display: none;
+ }
 }
 
 /* Планшетная версия */
@@ -83,13 +88,6 @@
   }
 
   .main-nav__toggle {
-    display: none;
-  }
-}
-
-@media (max-width: @mobile-width-only) {
-   .main-nav--closed .site-list-right__item,
-   .main-nav--closed .site-list-left__item {
     display: none;
   }
 }

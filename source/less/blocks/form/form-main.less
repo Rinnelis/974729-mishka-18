@@ -10,29 +10,75 @@
   line-height: 16px;
 }
 
-/* Мобильная версия */
+.form__order {
+  background-color: transparent;
+  padding-bottom: 33px;
+}
 
-.order-form {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+/* Мобильная версия */
+@media (max-width: @mobile-width-only) {
+  .order-form {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .form-item__title {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 198px;
+      height: 1px;
+      background-color: #63d1bb;
+      left: 62px;
+      top: 7px;
+    }
+  }
+
+  .form-legend {
+    margin-top: 13px;
+    margin-bottom: 31px;
+  }
+
+  .form__order {
+    width: 260px;
+    margin-bottom: 55px;
+  }
 }
 
 /* Планшетная версия */
-
 @media (min-width: @tablet-width) {
-  .order-form {
-    width: 768px;
-    margin: 0 auto;
+  .form-item__title {
+    margin: 0;
+  }
+
+  .form-legend {
+    margin-top: 59px;
+    margin-left: 198px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__order {
+    width: 230px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-top: -56px;
   }
 }
 
 /* Десктопная версия */
-
 @media (min-width: @desktop-width) {
-  .order-form {
-    width: 1050px;
-    margin: 0 auto;
+  .form-legend {
+    margin-top: 55px;
+    margin-left: 398px;
+  }
+
+  .form__order {
+    width: 230px;
+    margin-bottom: 50px;
+    margin-left: 325px;
+    margin-top: -56px;
   }
 }

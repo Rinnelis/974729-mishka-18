@@ -1,26 +1,110 @@
-/* Мобильная версия */
+.form-item__email {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #000000;
 
-.email {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+  }
+}
+
+.form-item__email:hover + svg,
+.form-item__email:active + svg {
+  fill: #62d1ba;
+}
+
+.form-item__email-icon {
+  opacity: 0.2;
+}
+
+/* Мобильная версия */
+@media (max-width: @mobile-width-only) {
+  .email .form-item__title::after {
+    width: 179px;
+    left: 80px;
+  }
+
+  .form-item__email {
+    width: 260px;
+    margin-top: 6px;
+    margin-bottom: 19px;
+    padding-bottom: 17px;
+  }
+
+  .email .form__right-column {
+    position: relative;
+  }
+
+  .form-item__email-icon {
+    position: absolute;
+    right: 4px;
+    top: 3px;
+  }
 }
 
 /* Планшетная версия */
-
 @media (min-width: @tablet-width) {
   .email {
     width: 768px;
     margin: 0 auto;
+    background-color: #f1f1f1;
+    padding-top: 17px;
+
+    & .form__right-column {
+      width: 500px;
+      margin-left: auto;
+      position: relative;
+      margin-bottom: 50px;
+    }
+  }
+
+  .email__wrapper {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-item__email {
+    width: 485px;
+    font-size: 19px;
+    line-height: 18px;
+    margin-top: -6px;
+    padding-left: 15px;
+    padding-bottom: 11px;
+  }
+
+  .form-item__email-icon {
+    position: absolute;
+    right: 22px;
+    bottom: 9px;
   }
 }
 
 /* Десктопная версия */
-
 @media (min-width: @desktop-width) {
   .email {
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .email__wrapper {
     width: 1050px;
     margin: 0 auto;
+    padding-left: 112px;
+
+    & .form__right-column {
+      width: 700px;
+      margin-left: 56px;
+    }
+  }
+
+  .form-item__email {
+    width: 684px;
+  }
+
+  .form-item__email-icon {
+    right: 4px;
   }
 }
