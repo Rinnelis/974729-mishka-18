@@ -1,26 +1,106 @@
-/* Мобильная версия */
+.form-item__tel {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #000000;
 
-.telephone {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+  }
+}
+
+.form-item__tel:hover + svg,
+.form-item__tel:active + svg {
+  fill: #62d1ba;
+}
+
+.form-item__tel-icon {
+  opacity: 0.2;
+}
+
+/* Мобильная версия */
+@media (max-width: @mobile-width-only) {
+  .form-item__tel {
+    width: 260px;
+    margin-top: 4px;
+    margin-bottom: 19px;
+    padding-bottom: 17px;
+  }
+
+  .telephone .form__right-column {
+    position: relative;
+  }
+
+  .form-item__tel-icon {
+    position: absolute;
+    right: 8px;
+    top: 1px;
+  }
 }
 
 /* Планшетная версия */
-
 @media (min-width: @tablet-width) {
   .telephone {
     width: 768px;
     margin: 0 auto;
+    background-color: #f1f1f1;
+    padding-top: 68px;
+
+    & .form__right-column {
+      width: 500px;
+      margin-left: auto;
+      position: relative;
+      margin-bottom: 25px;
+    }
+  }
+
+  .telephone__wrapper {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-item__tel {
+    width: 485px;
+    font-size: 19px;
+    line-height: 18px;
+    margin-top: -6px;
+    padding-left: 15px;
+    padding-bottom: 11px;
+  }
+
+  .form-item__tel-icon {
+    position: absolute;
+    right: 26px;
+    bottom: 17px;
   }
 }
 
 /* Десктопная версия */
-
 @media (min-width: @desktop-width) {
   .telephone {
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .telephone__wrapper {
     width: 1050px;
     margin: 0 auto;
+    padding-left: 112px;
+
+    & .form__right-column {
+      width: 700px;
+      margin-left: 81px;
+      margin-top: 1px;
+    }
+  }
+
+  .form-item__tel {
+    width: 684px;
+  }
+
+  .form-item__tel-icon {
+    right: 8px;
   }
 }

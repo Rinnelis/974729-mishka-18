@@ -1,26 +1,62 @@
-/* Мобильная версия */
+.additional-info__textarea:hover,
+.additional-info__textarea:active {
+  border-color: #62d1ba;
+}
 
-.additional-info {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+/* Мобильная версия */
+@media (max-width: @mobile-width-only) {
+  .additional-info__textarea {
+    margin-top: 10px;
+    border: 2px solid #444444;
+    width: 239px;
+    height: 121px;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
 }
 
 /* Планшетная версия */
-
 @media (min-width: @tablet-width) {
   .additional-info {
-    width: 768px;
+    width: 668px;
     margin: 0 auto;
+    padding-top: 68px;
+    display: flex;
+    flex-wrap: wrap;
+
+    & .form__right-column {
+      width: 500px;
+      margin-left: auto;
+    }
+  }
+
+  .additional-info__textarea {
+    margin-top: -18px;
+    border: 2px solid #444444;
+    width: 481px;
+    height: 124px;
+    padding-left: 13px;
+    padding-top: 12px;
+    font-size: 19px;
+    line-height: 18px;
   }
 }
 
 /* Десктопная версия */
-
 @media (min-width: @desktop-width) {
   .additional-info {
     width: 1050px;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 63px;
+
+    & .form__right-column {
+      width: 700px;
+      margin-left: 73px;
+    }
+  }
+
+  .additional-info__textarea {
+    width: 681px;
   }
 }

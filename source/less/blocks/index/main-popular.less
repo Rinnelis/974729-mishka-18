@@ -10,6 +10,7 @@
   line-height: 20px;
   font-weight: bold;
   color: #63d1bb;
+  margin: 0;
 }
 
 .main-popular__item-description,
@@ -17,6 +18,7 @@
   font-size: 15px;
   line-height: 24px;
   color: #444444;
+  margin: 0;
 }
 
 .main-popular__price {
@@ -24,31 +26,159 @@
   line-height: 24px;
   font-weight: bold;
   color: #444444;
+  margin: 0;
 }
 
 .main-popular__list {
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
   padding: 0;
 }
 
 /* Мобильная версия */
 
-.main-popular {
-  width: 320px;
-  margin: 0 auto;
+@media (max-width: @mobile-width-only) {
+  .main-popular {
+    margin-bottom: 69px;
+    position: relative;
+
+    &::after {
+      content: "";
+      bottom: -42px;
+      position: absolute;
+      background-image: url("../../img/bg-zigzag-line.svg");
+      background-position: -7px center;
+      background-size: 320px 7px;
+      width: 100%;
+      height: 6px;
+    }
+  }
+
+  .main-popular__title {
+    display: block;
+    margin-top: 27px;
+  }
+
+  .main-popular__week-popular {
+    margin-top: 6px;
+  }
+
+  .main-popular__item-description {
+    margin-top: 22px;
+  }
+
+  .main-popular__table {
+    border-collapse: collapse;
+    margin-top: 16px;
+    margin-bottom: 28px;
+
+    & tr {
+      border-bottom: 1px solid #ececec;
+      height: 40px;
+    }
+  }
+
+  .main-popular__property {
+    width: 95px;
+  }
+
+  .main-popular__char {
+    width: 165px;
+  }
+
+  .main-popular__price {
+    margin-top: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
 }
 
 /* Планшетная версия */
 
 @media (min-width: @tablet-width) {
   .main-popular {
-    width: 670px;
-    margin: 0 auto;
+    margin-top: 44px;
+    margin-bottom: 118px;
+    position: relative;
+
+    &::after {
+      content: "";
+      bottom: -69px;
+      position: absolute;
+      background-image: url("../../img/bg-zigzag-line.svg");
+      background-position: -20px center;
+      background-size: 768px 17px;
+      width: 100%;
+      height: 17px;
+    }
   }
 
   .main-popular__list {
+    width: 668px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .main-popular__title {
+    display: block;
+    margin-left: -3px;
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 49px;
+  }
+
+  .main-popular__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .main-popular__week-popular {
+    position: absolute;
+    line-height: 17px;
+    right: 14px;
+    top: 11px;
+    width: 100px;
+    text-align: center;
+  }
+
+  .main-popular__item-description {
+    font-size: 17px;
+    line-height: 30px;
+    display: block;
+    padding-right: 370px;
+  }
+
+  .main-popular__table {
+    border-collapse: collapse;
+    width: 291px;
+    line-height: 20px;
+    margin-top: 35px;
+    margin-bottom: 55px;
+
+    & tr {
+      border-bottom: 1px solid #ececec;
+      height: 40px;
+    }
+  }
+
+  .main-popular__price {
+    font-size: 20px;
+    margin-left: 70px;
+  }
+
+  .main-popular__image {
+    position: absolute;
+    right: 0;
+    top: 107px;
+  }
+
+  .main-popular__order {
+    margin-left: -2px;
+    margin-top: 35px;
+    width: 288px;
   }
 }
 
@@ -58,5 +188,52 @@
   .main-popular {
     width: 1050px;
     margin: 0 auto;
+    margin-top: 124px;
+    margin-bottom: 156px;
+
+    &::after {
+      bottom: -96px;
+      background-position: -25px center;
+      background-size: 1050px 23px;
+      width: 1050px;
+      height: 23px;
+    }
+  }
+
+  .main-popular__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .main-popular__list {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .main-popular__week-popular {
+    left: -143px;
+    top: 15px;
+  }
+
+  .main-popular__item-description {
+    padding-right: 400px;
+  }
+
+  .main-popular__table {
+    margin-top: 49px;
+  }
+
+  .main-popular__price {
+    margin-top: 53px;
+    margin-left: 73px;
+  }
+
+  .main-popular__order {
+    margin-left: 0;
+    margin-top: 34px;
+  }
+  .main-popular__image {
+    right: -175px;
+    top: -52px;
   }
 }

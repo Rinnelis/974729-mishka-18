@@ -4,21 +4,124 @@
   font-weight: bold;
 }
 
+.type-accessory__label,
+.type-toy__label {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -63px;
+    top: -8px;
+    border: 2px solid #444444;
+    border-radius: 100%;
+  }
+}
+
+.type-accessory__input:checked + .type-accessory__label::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: -51px;
+  top: 3px;
+  background-color: #62d1ba;
+  border-radius: 100%;
+}
+
+.type-toy__input:checked + .type-toy__label::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: -51px;
+  top: 3px;
+  background-color: #62d1ba;
+  border-radius: 100%;
+}
+
+.form__right-column label:hover::before {
+  border-color: #62d1ba;
+}
+
+.form__right-column label:active::before {
+  border-color: #c7c7c7;
+}
+
 /* Мобильная версия */
 
-.form-type {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+@media (max-width: @mobile-width-only) {
+  .form-type .form__right-column {
+    margin-left: 63px;
+    margin-top: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .type-toy__label {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
 }
 
 /* Планшетная версия */
 
 @media (min-width: @tablet-width) {
   .form-type {
-    width: 768px;
+    width: 668px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 75px;
+
+    & .form__right-column {
+      width: 500px;
+      box-sizing: border-box;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      padding-left: 79px;
+      margin-top: -3px;
+    }
+
+    & label {
+      font-size: 19px;
+      line-height: 18px;
+    }
+  }
+
+  .type-toy__label {
+    display: block;
+    margin-top: 58px;
+    margin-bottom: 69px;
+  }
+
+  .type-accessory__label,
+  .type-toy__label {
+    &::before {
+      width: 47px;
+      height: 47px;
+      left: -79px;
+      top: -15px;
+    }
+  }
+
+  .type-accessory__input:checked + .type-accessory__label::after {
+    width: 20px;
+    height: 20px;
+    left: -64px;
+    top: 1px;
+  }
+
+  .type-toy__input:checked + .type-toy__label::after {
+    width: 20px;
+    height: 20px;
+    left: -64px;
+    top: 1px;
   }
 }
 
@@ -28,5 +131,11 @@
   .form-type {
     width: 1050px;
     margin: 0 auto;
+    padding-left: 130px;
+    padding-top: 75px;
+
+    & .form__right-column {
+      margin-left: 75px;
+    }
   }
 }

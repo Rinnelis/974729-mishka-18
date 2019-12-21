@@ -1,6 +1,30 @@
 .button {
-  font-size: 18px;
+  display: block;
+  height: 33px;
+  border: 2px solid #444444;
+  text-align: center;
+  padding-top: 15px;
+
+  font-size: 17px;
   line-height: 20px;
   color: #444444;
   text-transform: uppercase;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .button {
+    width: 255px;
+  }
 }

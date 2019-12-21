@@ -3,3 +3,47 @@
   line-height: 18px;
   font-weight: bold;
 }
+
+.copyright__link:hover path {
+  fill: #46c1ae;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
+@media (max-width: @mobile-width-only) {
+  .copyright {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .copyright__link {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 33px;
+    padding-top: 26px;
+    padding-left: 25px;
+    padding-right: 20px;
+  }
+
+  .copyright__link-icon {
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .copyright__text {
+    margin-top: 12px;
+    margin-right: 22px;
+  }
+
+  .copyright__link-icon {
+    margin-right: -6px;
+  }
+}

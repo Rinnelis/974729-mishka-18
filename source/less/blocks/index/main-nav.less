@@ -1,67 +1,102 @@
-.site-list__item {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: bold;
+.main-nav__list {
+  margin: 0;
+  padding: 0;
 }
 
-/* Мобильная версия */
+@media (max-width: @mobile-width-only) {
+  .main-nav {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    border-bottom: 1px solid #dfdfdf;
+  }
 
-.page-header {
-  display: flex;
-  flex-direction: column;
-}
+  .main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 79px;
+    height: 79px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: none;
+  }
 
-.page-header__logo {
-  height: 79px;
-}
+  .main-nav--opened .main-nav__toggle {
+    top: 0;
+    right: 0;
 
-.main-nav {
-  width: 320px;
-  margin: 0 auto;
-}
+    &::before,
+    &::after {
+      content: "";
 
-.site-list {
-  display: flex;
-  flex-direction: column;
+      position: absolute;
+      top: 38px;
+      left: 24px;
+
+      width: 28px;
+      height: 2px;
+
+      background-color: #221f1f;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav--closed .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 28px;
+    width: 20px;
+    height: 2px;
+    background-color: #221f1f;
+    box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .site-list-right__item,
+  .main-nav--nojs .site-list-left__item {
+    display: block;
+  }
+
+  .main-nav--closed .site-list-right__item,
+  .main-nav--closed .site-list-left__item {
+    display: none;
+  }
 }
 
 /* Планшетная версия */
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    flex-direction: row;
-    width: 670px;
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
     margin: 0 auto;
   }
 
-  .page-header__logo {
-    height: 90px;
-  }
-
-  .site-list {
-    flex-direction: row;
-  }
-
-  .main-nav {
-    width: auto;
-    margin: 0;
+  .main-nav__toggle {
+    display: none;
   }
 }
 
 /* Десктопная версия */
 
 @media (min-width: @desktop-width) {
-  .page-header {
-    flex-direction: row;
+  .main-nav {
     width: 1050px;
     margin: 0 auto;
-  }
-
-  .page-header__logo {
-    display: absolute;
-  }
-
-  .site-list {
-    flex-direction: row;
   }
 }

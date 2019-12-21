@@ -1,7 +1,13 @@
+.reviews__list {
+  margin: 0;
+  padding-left: 0;
+}
+
 .reviews__title {
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
+  margin: 0;
 }
 
 .reviews__text {
@@ -20,26 +26,184 @@
   line-height: 30px;
 }
 
-.reviews__prev,
-.reviews__next {
-  width: 130px;
+.reviews-button__prev,
+.reviews-button__next {
+  position: relative;
+  display: block;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.reviews-button__prev::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/icon-left-arrow.svg");
+  width: 50px;
+  height: 26px;
+}
+
+.reviews-button__next::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/icon-right-arrow.svg");
+  width: 50px;
+  height: 26px;
 }
 
 /* Мобильная версия */
 
-.reviews {
-  width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+@media (max-width: @mobile-width-only) {
+  .reviews {
+    position: relative;
+    margin-bottom: 86px;
+
+    &::after {
+      content: "";
+      bottom: -51px;
+      position: absolute;
+      background-image: url("../../img/bg-zigzag-line.svg");
+      background-position: -7px center;
+      background-size: 320px 7px;
+      width: 100%;
+      height: 6px;
+    }
+  }
+
+  .reviews__wrapper {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .reviews__title {
+    margin-top: 23px;
+    margin-bottom: 24px;
+  }
+
+  .reviews__text br {
+    display: none;
+  }
+
+  .reviews__autor {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .reviews__autor-instagram {
+    margin: 0;
+  }
+
+  .reviews-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 29px;
+    margin-bottom: 38px;
+  }
+
+  .reviews-button__prev,
+  .reviews-button__next {
+    width: 130px;
+    height: 52px;
+    border: 1px solid #ececec;
+  }
+
+  .reviews-button__prev::before {
+    top: 12px;
+    left: 38px;
+  }
+
+  .reviews-button__next::before {
+    top: 12px;
+    left: 38px;
+  }
 }
 
 /* Планшетная версия */
 
 @media (min-width: @tablet-width) {
   .reviews {
-    width: 670px;
+    position: relative;
+    margin-bottom: 192px;
+
+    &::after {
+      content: "";
+      bottom: -131px;
+      position: absolute;
+      background-image: url("../../img/bg-zigzag-line.svg");
+      background-position: -20px center;
+      background-size: 768px 17px;
+      width: 100%;
+      height: 17px;
+    }
+  }
+
+  .reviews__wrapper {
+    width: 668px;
     margin: 0 auto;
+    position: relative;
+  }
+
+  .reviews__write {
+    position: absolute;
+    right: 0;
+    top: 79px;
+    width: 171px;
+  }
+
+  .reviews__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-left: -5px;
+    margin-top: 22px;
+    padding-top: 78px;
+    margin-bottom: 48px;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .reviews__autor {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 57px;
+    margin-bottom: 4px;
+  }
+
+  .reviews__autor-instagram {
+    margin-top: 0;
+  }
+
+  .reviews-buttons {
+    width: 175px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+  }
+
+  .reviews-button__prev,
+  .reviews-button__next {
+    width: 50px;
+    height: 26px;
+    border: none;
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
   }
 }
 
@@ -49,5 +213,43 @@
   .reviews {
     width: 1050px;
     margin: 0 auto;
+    margin-bottom: 255px;
+
+    &::after {
+      bottom: -183px;
+      background-position: -25px center;
+      background-size: 1050px 23px;
+      width: 1050px;
+      height: 23px;
+    }
+  }
+
+  .reviews__wrapper {
+    width: 875px;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 76px;
+  }
+  .reviews__text {
+    padding-right: 100px;
+
+    & br {
+      display: inline;
+    }
+  }
+
+  .reviews__autor {
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 40px;
+  }
+
+  .reviews__write {
+    top: 85px;
   }
 }

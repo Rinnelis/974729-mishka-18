@@ -13,17 +13,81 @@
 
 /* Мобильная версия */
 
-.form__top {
-  width: 320px;
-  margin: 0 auto;
+@media (max-width: @mobile-width-only) {
+  .form__top {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .form__title {
+    display: block;
+    margin: 0;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 76px;
+  }
+
+  .form__description {
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    padding-top: 22px;
+    padding-bottom: 11px;
+  }
 }
 
 /* Планшетная версия */
 
 @media (min-width: @tablet-width) {
   .form__top {
+    position: relative;
     width: 768px;
     margin: 0 auto;
+  }
+
+  .form__delivery {
+    display: block;
+    top: -52px;
+  }
+
+  .form__title {
+    font-size: 43px;
+    line-height: 50px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 79px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 69px;
+      top: -69px;
+      left: 0;
+      background-color: #f1f1f1;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+      background: url("../../img/bg-zigzag-fill.svg");
+      background-position: center;
+      background-size: 768px 24px;
+      width: 768px;
+      height: 24px;
+    }
+  }
+
+  .form__description {
+    width: 668px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 74px;
   }
 }
 
@@ -31,7 +95,35 @@
 
 @media (min-width: @desktop-width) {
   .form__top {
-    width: 1050px;
+    width: 1150px;
     margin: 0 auto;
+  }
+
+  .form__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 16px;
+    padding-bottom: 102px;
+
+    &::before {
+      height: 77px;
+      top: -77px;
+    }
+
+    &::after {
+      width: 1150px;
+      height: 34px;
+      background-size: 1150px 34px;
+      bottom: -18px;
+    }
+  }
+
+  .form__delivery {
+    top: -60px;
+  }
+
+  .form__description {
+    width: 700px;
+    margin-top: 123px;
   }
 }
