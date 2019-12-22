@@ -50,6 +50,14 @@
   border-color: #c7c7c7;
 }
 
+.type-accessory__input:focus + label::before {
+  border-color: #62d1ba;
+}
+
+.type-toy__input:focus + label::before {
+  border-color: #62d1ba;
+}
+
 /* Мобильная версия */
 
 @media (max-width: @mobile-width-only) {
@@ -131,7 +139,7 @@
   .form-type {
     width: 1050px;
     margin: 0 auto;
-    padding-left: 130px;
+    padding-left: 115px;
     padding-top: 75px;
 
     & .form__right-column {

@@ -25,18 +25,22 @@
       border: 2px solid #444444;
     }
 
-  & label:hover::before {
-    border-color: #62d1ba;
-  }
+    &:hover::before {
+      border-color: #62d1ba;
+    }
 
-  & label:active::before {
-    border-color: #c7c7c7;
+    &:active::before {
+      border-color: #c7c7c7;
+    }
   }
 }
+
+.form-color__input:focus + label::before {
+  border-color: #62d1ba;
 }
 
 .form-color__input:checked + label::before {
-  background: url(../../img/icon-tick.svg) center center no-repeat;
+  background: url("../img/icon-tick.svg") center center no-repeat;
   background-size: 63%;
 }
 
