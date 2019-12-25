@@ -24,9 +24,16 @@
   font-weight: bold;
   color: #ffffff;
 
-  &:active {
+  &:active .item-interior-icon,
+  &:active .item-toy-icon,
+  &:active span {
     opacity: 0.3;
   }
+}
+
+.item-interior-icon,
+.item-toy-icon {
+  fill: #3bb09d;
 }
 
 .item-interior-link {
@@ -81,10 +88,6 @@
     height: 62px;
     padding-right: 6px;
     margin-top: -2px;
-
-    & path {
-      fill: #3bb09d;
-    }
   }
 
   .item-toy-icon {
@@ -93,10 +96,6 @@
     margin-right: -3px;
     margin-top: -5px;
     padding-bottom: 5px;
-
-    & path {
-      fill: #3bb09d;
-    }
   }
 }
 
@@ -204,7 +203,7 @@
       background-size: auto 37px;
       background-repeat: repeat-x;
       background-position: 50% 2px;
-      bottom: -13px;
+      bottom: -12px;
     }
   }
 
