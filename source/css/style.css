@@ -1574,13 +1574,13 @@ a {
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
   z-index: 11;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
 }
 .modal-order--show {
   display: block;
-  -webkit-animation: appear 0.4s forwards;
-          animation: appear 0.4s forwards;
+  -webkit-animation: appear 0.3s forwards;
+          animation: appear 0.3s forwards;
 }
 .modal-title {
   font-size: 25px;
