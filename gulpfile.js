@@ -21,7 +21,8 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/css/normalize.css"
     ], {
       base: "source"
     })
@@ -40,7 +41,7 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 gulp.task("sprite", function () {
@@ -62,7 +63,7 @@ gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true})
+    imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
     ]))
     .pipe(gulp.dest("source/img"));

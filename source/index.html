@@ -4,15 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Интернет-магазин игрушек ручной работы «Мишка»</title>
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
 
   <body>
-    <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
-
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <a class="page-header__logo">
@@ -40,14 +38,14 @@
         <ul class="main-nav__list site-list-right">
           <li class="site-list-right__item site-list-right__item-search">
             <a href="#" aria-label="Поиск по сайту">
-            <svg class="item-search__search-icon" width="18" height="18">
-            <use xlink:href="img/sprite.svg#search-icon"></use>
+            <svg class="site-list-right__search-icon" width="18" height="18">
+            <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
             Поиск по сайту</a>
           <li class="site-list-right__item site-list-right__item-cart">
             <a class="site-list-right__cart-link" href="#">
-              <svg class="item-cart__cart-icon" width="21" height="18">
-              <use xlink:href="img/sprite.svg#cart-icon"></use>
+              <svg class="site-list-right__cart-icon" width="21" height="18">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
               Корзина: пока пуста</a>
           </li>
@@ -65,7 +63,7 @@
           <a href="#" class="item-interior-link">
             <span>Предметы<br> интерьера</span>
             <svg class="item-interior-icon" width="40" height="62">
-            <use xlink:href="img/sprite.svg#interior-icon"></use>
+            <use xlink:href="img/sprite.svg#icon-interior"></use>
             </svg>
           </a>
         </li>
@@ -73,7 +71,7 @@
           <a href="#" class="item-toy-link">
             <span>Детские<br> игрушки</span>
             <svg class="item-toy-icon" width="60" height="60">
-            <use xlink:href="img/sprite.svg#toy-icon"></use>
+            <use xlink:href="img/sprite.svg#icon-toy"></use>
             </svg>
           </a>
         </li>
@@ -119,27 +117,27 @@
         <div class="about-us__wrapper">
         <h2 class="about-us__title">Коротко о нас:</h2>
         <ul class="about-us__list">
-          <li class="about-us__item">
+          <li class="about-us__item item-one">
             <img class="about-us__icon" src="img/icon-feature-flower.svg" width="32" height="37" alt="">
             <p class="about-us__description">Экологически<br> чистые материалы</p>
           </li>
-          <li class="about-us__item">
+          <li class="about-us__item item-three">
             <img class="about-us__icon" src="img/icon-feature-money.svg" width="47" height="27" alt="">
             <p class="about-us__description">Скандинавский стиль<br> по российской цене</p>
           </li>
-          <li class="about-us__item">
+          <li class="about-us__item item-five">
             <img class="about-us__icon" src="img/icon-feature-heart.svg" width="34" height="27" alt="">
             <p class="about-us__description">Увеличивает лайки<br> на фотографиях</p>
           </li>
-          <li class="about-us__item">
+          <li class="about-us__item item-two">
             <img class="about-us__icon" src="img/icon-feature-ball.svg" width="35" height="34" alt="">
             <p class="about-us__description">Связано вручную с<br> любовью и умилением</p>
           </li>
-          <li class="about-us__item">
+          <li class="about-us__item item-four">
             <img class="about-us__icon" src="img/icon-feature-rocket.svg" width="55" height="23" alt="">
             <p class="about-us__description">Поддержка отечественного производителя</p>
           </li>
-          <li class="about-us__item">
+          <li class="about-us__item item-six">
             <img class="about-us__icon" src="img/icon-feature-gift.svg" width="33" height="32" alt="">
             <p class="about-us__description">Поставляется в<br> подарочной упаковке</p>
           </li>
@@ -160,10 +158,10 @@
           </li>
         </ul>
         <div class="reviews-buttons">
-        <button class="reviews-button__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-        <button class="reviews-button__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+        <button class="reviews-buttons__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+        <button class="reviews-buttons__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
         </div>
-        <a class="reviews__write button" href="#">Написать</a>
+        <a class="reviews__write button" href="feedback.html">Написать</a>
         </div>
       </section>
 
@@ -184,6 +182,7 @@
           <img class="map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="459" alt="Карта местонахождения «Мишки»:
           г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </picture>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002815!2d30.320858715677197!3d59.93871916905466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1577543572792!5m2!1sru!2sru" height="459" allowfullscreen=""></iframe>
         </div>
         <a class="contacts__write button" href="form.html">Напишите нам</a>
         </div>
@@ -194,7 +193,7 @@
       <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="#" aria-label="Логотип «Мишка»">
         <svg class="page-footer__logo-image" width="102" height="34">
-        <use xlink:href="img/sprite.svg#footer-logo"></use>
+        <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
         </svg>
       </a>
       <div class="page-footer__social social">
@@ -202,24 +201,24 @@
           <li class="social__item item-instagram">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Мы в Инстаграме</span>
-              <svg class="social__link--instagram-icon" width="22" height="21">
-              <use xlink:href="img/sprite.svg#instagram-icon"></use>
+              <svg class="social__link-instagram-icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item item-facebook">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg class="social__link--facebook-icon" width="15" height="28">
-              <use xlink:href="img/sprite.svg#facebook-icon"></use>
+              <svg class="social__link-facebook-icon" width="15" height="28">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social__item item-twitter">
             <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
               <span class="visually-hidden">Мы в Твиттере</span>
-              <svg class="social__link--twitter-icon" width="23" height="20">
-              <use xlink:href="img/sprite.svg#twitter-icon"></use>
+              <svg class="social__link-twitter-icon" width="23" height="20">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -228,8 +227,8 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <b class="copyright__text">Разработано</b><span class="visually-hidden">HTML Academy</span>
-          <svg class="copyright__link-icon" width="40" height="45">
-          <use xlink:href="img/sprite.svg#copyright-icon"></use>
+          <svg class="copyright__link-icon" width="27" height="34">
+          <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
@@ -246,11 +245,11 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <div class="form-size">
           <input class="order-form__input visually-hidden" type="radio" name="form-radio" id="s-size" checked>
-          <label class="s-size__label" for="s-size">S</label>
+          <label class="order-form__label label-s" for="s-size">S</label>
           <input class="order-form__input visually-hidden" type="radio" name="form-radio" id="m-size">
-          <label class="m-size__label" for="m-size">M</label>
+          <label class="order-form__label label-m" for="m-size">M</label>
           <input class="order-form__input visually-hidden" type="radio" name="form-radio" id="l-size">
-          <label class="l-size__label" for="l-size">L</label>
+          <label class="order-form__label label-l" for="l-size">L</label>
           </div>
           <button class="modal-button" type="button">Добавить</button>
         </form>
@@ -259,5 +258,6 @@
     </section>
 
     <script src="js/script.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>

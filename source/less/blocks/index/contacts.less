@@ -44,6 +44,14 @@
     width: 67px;
     height: 100px;
   }
+
+  & iframe {
+    border: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 /* Мобильная версия */
@@ -151,6 +159,10 @@
       left: 363px;
       top: 139px;
     }
+
+    & iframe {
+      height: 457px;
+    }
   }
 
   .map-image {
@@ -210,6 +222,11 @@
       left: 238px;
       top: 146px;
     }
+
+    & iframe {
+      width: 525px;
+      height: 457px;
+    }
   }
 
   .map-image {
@@ -221,5 +238,6 @@
     position: absolute;
     bottom: 3px;
     margin-bottom: 0;
+    left: 0;
   }
 }

@@ -1,11 +1,7 @@
-.form-type label {
+.form__right-column__label {
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
-}
-
-.type-accessory__label,
-.type-toy__label {
   position: relative;
 
   &::before {
@@ -18,9 +14,17 @@
     border: 2px solid #444444;
     border-radius: 100%;
   }
+
+  &:hover::before {
+    border-color: #62d1ba;
+  }
+
+  &:active::before {
+    border-color: #c7c7c7;
+  }
 }
 
-.type-accessory__input:checked + .type-accessory__label::after {
+.form__right-column__input:checked + .form__right-column__label::after {
   position: absolute;
   content: "";
   width: 15px;
@@ -31,30 +35,7 @@
   border-radius: 100%;
 }
 
-.type-toy__input:checked + .type-toy__label::after {
-  position: absolute;
-  content: "";
-  width: 15px;
-  height: 15px;
-  left: -51px;
-  top: 3px;
-  background-color: #62d1ba;
-  border-radius: 100%;
-}
-
-.form__right-column label:hover::before {
-  border-color: #62d1ba;
-}
-
-.form__right-column label:active::before {
-  border-color: #c7c7c7;
-}
-
-.type-accessory__input:focus + label::before {
-  border-color: #62d1ba;
-}
-
-.type-toy__input:focus + label::before {
+.form__right-column__input:focus + .form__right-column__label::before {
   border-color: #62d1ba;
 }
 
@@ -69,9 +50,12 @@
     flex-direction: column;
   }
 
-  .type-toy__label {
+  .label-accessory {
+    margin-bottom: 25px;
+  }
+
+  .label-toy {
     display: block;
-    margin-top: 25px;
     margin-bottom: 30px;
   }
 }
@@ -91,25 +75,17 @@
       box-sizing: border-box;
       margin-left: auto;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
       padding-left: 79px;
       margin-top: -3px;
     }
-
-    & label {
-      font-size: 19px;
-      line-height: 18px;
-    }
   }
 
-  .type-toy__label {
-    display: block;
-    margin-top: 58px;
-    margin-bottom: 69px;
-  }
+  .form__right-column__label {
+    font-size: 19px;
+    line-height: 18px;
 
-  .type-accessory__label,
-  .type-toy__label {
     &::before {
       width: 47px;
       height: 47px;
@@ -118,14 +94,16 @@
     }
   }
 
-  .type-accessory__input:checked + .type-accessory__label::after {
-    width: 20px;
-    height: 20px;
-    left: -64px;
-    top: 1px;
+  .label-accessory {
+    margin-bottom: 58px;
   }
 
-  .type-toy__input:checked + .type-toy__label::after {
+  .label-toy {
+    display: block;
+    margin-bottom: 69px;
+  }
+
+  .form__right-column__input:checked + .form__right-column__label::after {
     width: 20px;
     height: 20px;
     left: -64px;
