@@ -29,3 +29,5 @@ overlay.addEventListener("click", function() {
   overlay.classList.remove("overlay--show");
   modalForm.classList.remove("modal-order--show");
 });
+
+svg4everybody();
