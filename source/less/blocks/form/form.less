@@ -1,28 +1,28 @@
-.form-item__title {
+.form__title {
   font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
   color: #63d1bb;
 }
 
-.form-legend {
+.form__legend {
   font-size: 14px;
   line-height: 16px;
 }
 
-.form__order {
+.form__button {
   background-color: transparent;
   padding-bottom: 33px;
 }
 
 /* Мобильная версия */
 @media (max-width: @mobile-width-only) {
-  .order-form {
+  .form__order {
     width: 260px;
     margin: 0 auto;
   }
 
-  .form-item__title {
+  .form__title {
     position: relative;
 
     &::after {
@@ -36,12 +36,12 @@
     }
   }
 
-  .form-legend {
+  .form__legend {
     margin-top: 13px;
     margin-bottom: 31px;
   }
 
-  .form__order {
+  .form__button {
     width: 260px;
     margin-bottom: 55px;
   }
@@ -49,25 +49,25 @@
 
 /* Планшетная версия */
 @media (min-width: @tablet-width) {
-  .form-item__title {
+  .form__title {
     margin: 0;
   }
 
-  .form-legend {
+  .form__legend {
     margin-top: 59px;
     margin-left: 198px;
     font-size: 17px;
     line-height: 30px;
   }
 
-  .form__order {
+  .form__button {
     width: 230px;
     margin-bottom: 50px;
     margin-left: 50px;
     margin-top: -56px;
   }
 
-  .order-form {
+  .form__order {
     width: 768px;
     margin: 0 auto;
   }
@@ -75,19 +75,19 @@
 
 /* Десктопная версия */
 @media (min-width: @desktop-width) {
-  .form-legend {
+  .form__legend {
     margin-top: 55px;
     margin-left: 398px;
   }
 
-  .form__order {
+  .form__button {
     width: 230px;
     margin-bottom: 50px;
     margin-left: 225px;
     margin-top: -56px;
   }
 
-  .order-form {
+  .form__order {
     width: 1150px;
     margin: 0 auto;
   }

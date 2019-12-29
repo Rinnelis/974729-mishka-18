@@ -20,7 +20,7 @@
   }
 }
 
-.modal-order {
+.modal {
   display: none;
   position: fixed;
   background-color: #ffffff;
@@ -33,12 +33,12 @@
   transform-origin: left top;
 }
 
-.modal-order--show {
+.modal--show {
   display: block;
   animation: appear 0.3s forwards;
 }
 
-.modal-title {
+.modal__title {
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -46,26 +46,26 @@
   text-transform: uppercase;
 }
 
-.modal-text {
+.modal__text {
   font-size: 15px;
   line-height: 30px;
   text-align: center;
 }
 
-.form-size {
+.modal__size {
   display: flex;
   flex-wrap: wrap;
 }
 
-.order-form__input:focus + label {
+.modal__input:focus + label {
   border-color: #c7c7c7;
 }
 
-.order-form__input:checked + label {
+.modal__input:checked + label {
   border-color: #63d1bb;
 }
 
-.form-size label {
+.modal__label {
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
@@ -83,7 +83,7 @@
   }
 }
 
-.modal-button {
+.modal__button {
   border: none;
   background-color: #63d1bb;
   color: #ffffff;
@@ -104,88 +104,88 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .modal-order {
+  .modal {
     width: 320px;
     height: 336px;
   }
 
-  .modal-wrapper {
+  .modal__wrapper {
     width: 260px;
     margin: 0 auto;
   }
 
-  .modal-title {
+  .modal__title {
     padding-top: 5px;
     margin-bottom: 0;
   }
 
-  .modal-text {
+  .modal__text {
     margin-top: 12px;
   }
 
-  .form-size {
+  .modal__size {
     margin-top: 23px;
     margin-bottom: 31px;
 
-    & label {
+    label {
       width: 82px;
       height: 52px;
       padding-left: 32px;
       padding-top: 16px;
     }
 
-    & label:not(.label-l) {
+    label:not(.modal__label--l) {
       margin-right: 7px;
     }
   }
 }
 
 @media (min-width: @tablet-width) {
-  .modal-order {
+  .modal {
     width: 566px;
     height: 336px;
   }
 
-  .modal-wrapper {
+  .modal__wrapper {
     width: 354px;
     margin: 0 auto;
   }
 
-  .modal-title {
+  .modal__title {
     font-size: 30px;
     line-height: 57px;
     margin-bottom: 0;
     padding-top: 3px;
 
-    & br {
+    br {
       display: none;
     }
   }
 
-  .modal-text {
+  .modal__text {
     font-size: 17px;
     line-height: 30px;
     margin-top: 14px;
   }
 
-  .form-size {
+  .modal__size {
     margin-left: 2px;
     margin-top: 21px;
     margin-bottom: 31px;
 
-    & label {
+    label {
       width: 112px;
       height: 52px;
       padding-left: 48px;
       padding-top: 17px;
     }
 
-    & label:not(.label-l) {
+    label:not(.modal__label--l) {
       margin-right: 7px;
     }
   }
 
-  .modal-button {
+  .modal__button {
     width: 350px;
     margin-left: 2px;
   }
