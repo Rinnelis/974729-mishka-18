@@ -1,3 +1,5 @@
+svg4everybody();
+
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -29,5 +31,3 @@ overlay.addEventListener("click", function() {
   overlay.classList.remove("overlay--show");
   modalForm.classList.remove("modal--show");
 });
-
-svg4everybody();
